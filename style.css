@@ -18,12 +18,14 @@ h1{
 }
 
 .teams{
-   display: flex;
-    flex-direction: column; /* <--- ESTA es la clave: cambia de fila a columna */
-    align-items: center;    /* Los centra horizontalmente */
+    display: flex;
+    flex-direction: column; /* Apilados */
+    align-items: center;
     justify-content: center;
-    gap: 30px;              /* Un buen espacio entre Equipo 1 y Equipo 2 */
-    height: 100vh;
+    gap: 20px;
+    min-height: 100vh; /* Ocupa AL MENOS toda la pantalla */
+    padding: 20px 0;   /* Espacio arriba y abajo para que no se pegue a los bordes */
+    box-sizing: border-box;
 }
 /* Estilos para los contenedores de los equipos */
 .team1, .team2 {
@@ -53,7 +55,7 @@ h1{
 
 /* Estilos para los botones */
 
-button {
+.btn-box {
     background-color: #75AADB; /* Celeste Bandera */
     color: white;
     font-size: 1.5rem;
@@ -68,14 +70,29 @@ button {
     box-shadow: 0 4px 0 #4a8ac2; /* Sombrita 3D azul más oscuro */
 }
 
-button:hover {
+.btn-box:hover {
     background-color: #5fa0d6;
     transform: translateY(-2px); /* Se levanta un poquito */
 }
 
-button:active {
+.btn-box:active {
     transform: translateY(2px); /* Se hunde */
     box-shadow: 0 0 0 #4a8ac2;  /* Desaparece la sombra */
+}
+
+.btn-reset {
+    background: transparent;
+    border: 1px solid #FFC800; /* Borde dorado fino */
+    color: #FFC800;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    cursor: pointer;
+    letter-spacing: 2px;
+}
+.btn-reset:hover {
+    background: #FFC800;
+    color: black;
 }
 
 input {
@@ -87,6 +104,9 @@ input {
     background-color: #333738;
     color: white;
     align-items: center;
+    font-family: 'Bebas Neue', sans-serif;
+    margin: 10px 0;
+    text-shadow: 2px 2px 0px #75AADB; /* Sombrita celeste */
 
 }
 

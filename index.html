@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contador Truco</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
     <h1>Contador Truco</h1>
@@ -12,16 +15,17 @@
         <div class="team1">
             <label for="team1">Equipo 1:</label>
             <input type="number" id="team1" value="0" readonly>
-            <button onclick="increment('team1')">+</button>
-            <button onclick="decrement('team1')">-</button>
+            <button class="btn-box" onclick="increment('team1')">+</button>
+            <button class="btn-box" onclick="decrement('team1')">-</button>
         </div>
         <div class="versus">VS</div>
         <div class="team2">
             <label for="team2">Equipo 2:</label>
             <input type="number" id="team2" value="0" readonly>
-            <button onclick="increment('team2')">+</button>
-            <button onclick="decrement('team2')">-</button>
+            <button class="btn-box" onclick="increment('team2')">+</button>
+            <button class="btn-box" onclick="decrement('team2')">-</button>
         </div>
+        <button onclick="reset()" class="btn-reset">NUEVO PARTIDO</button>
     </div>
     <script src="index.js"></script>
 </body>
