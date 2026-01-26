@@ -9,7 +9,7 @@ body{
     font-family: Arial, sans-serif;
     text-align: center;
     padding: 20px;
-    background-image: url(img/back-img.jpg);
+    background-image: url(back-img.jpg);
     background-size: cover;
 }
 h1{
@@ -114,4 +114,5 @@ label{
     margin-bottom: 5px;
     font-size: 1.2rem;
     display: block;
+
 }
