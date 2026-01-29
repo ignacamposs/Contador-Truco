@@ -1,6 +1,9 @@
 function increment(team) {
     const teamInput = document.getElementById(team);
-    teamInput.value = parseInt(teamInput.value) + 1;
+    let currentValue = parseInt(teamInput.value);
+    if (currentValue < 30) {
+        teamInput.value = currentValue + 1;
+    }
 }
 
 function decrement(team) {

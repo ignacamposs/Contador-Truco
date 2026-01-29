@@ -37,7 +37,6 @@ h1{
     border: 2px solid #555;
     border-radius: 10px;
     width: 200px;
-    background-color: #444;
     font-size: 1rem;
     align-items: center;
     background: rgba(0, 0, 0, 0.5);
@@ -98,19 +97,23 @@ h1{
 }
 
 input {
-    width: 150px;
+    width: 150px; /* Si ves que en el celu queda muy ancho, bajalo a 100px */
     font-size: 3rem;
     text-align: center;
     border: none;
-    border-radius: 5px;
-    background-color: #333738;
+    
+    /* CAMBIO CLAVE: Fondo transparente para que se vea la tarjeta de atrás */
+    background-color: transparent; 
+    
     color: white;
-    align-items: center;
     font-family: 'Bebas Neue', sans-serif;
     margin: 10px 0;
-    text-shadow: 2px 2px 0px #75AADB; /* Sombrita celeste */
+    text-shadow: 2px 2px 0px #75AADB;
+    
+    /* TRUCO PRO: Sacar el borde azul que aparece cuando tocás el número en el celu */
+    outline: none; 
+} /* Sombrita celeste */
 
-}
 
 label{
     margin-bottom: 5px;
