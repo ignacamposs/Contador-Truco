@@ -8,9 +8,12 @@
 body{
     font-family: Arial, sans-serif;
     text-align: center;
-    padding: 20px;
-    background-image: url(back-img.jpg);
+    background-image: url(img/bg-img-pc.jpg);
+    background-position: center;
     background-size: cover;
+    background-attachment: fixed;
+    height: 100vh;
+    margin: 0;
 }
 h1{
     color: white;
@@ -24,7 +27,6 @@ h1{
     justify-content: center;
     gap: 20px;
     min-height: 100vh; /* Ocupa AL MENOS toda la pantalla */
-    padding: 20px 0;   /* Espacio arriba y abajo para que no se pegue a los bordes */
     box-sizing: border-box;
 }
 /* Estilos para los contenedores de los equipos */
@@ -114,5 +116,14 @@ label{
     margin-bottom: 5px;
     font-size: 1.2rem;
     display: block;
+}
 
+@media screen and (max-width: 768px) {
+    body{
+        background-image: url(img/back-img.jpg);
+    }
+    .teams {
+        flex-direction: column;
+    }
+    
 }
