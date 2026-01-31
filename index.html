@@ -10,22 +10,49 @@
     <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="teams">
-        <h1>Contador Truco</h1>
-        <div class="team1">
-            <label for="team1">Equipo 1:</label>
-            <input type="number" id="team1" value="0" readonly>
-            <button class="btn-box" onclick="increment('team1')">+</button>
-            <button class="btn-box" onclick="decrement('team1')">-</button>
-        </div>
-        <div class="versus">VS</div>
-        <div class="team2">
-            <label for="team2">Equipo 2:</label>
-            <input type="number" id="team2" value="0" readonly>
-            <button class="btn-box" onclick="increment('team2')">+</button>
-            <button class="btn-box" onclick="decrement('team2')">-</button>
-        </div>
-        <button onclick="reset()" class="btn-reset">NUEVO PARTIDO</button>
+    <div class="app-container">
+        <nav class="tabs">
+            <button class="tab-btn active" onclick="showGame('truco')">🃏 Truco</button>
+            <button class="tab-btn" onclick="showGame('tateti')">❌⭕ Ta-Te-Ti</button>
+        </nav>
+        <section id="truco" class="game-section">
+            <div class="teams">
+                <h1 class="title-game">Contador Truco</h1>
+                <div class="team1">
+                    <label for="team1">Equipo 1:</label>
+                    <input type="number" id="team1" value="0" readonly>
+                    <button class="btn-box" onclick="increment('team1')">+</button>
+                    <button class="btn-box" onclick="decrement('team1')">-</button>
+                </div>
+                <div class="versus">VS</div>
+                <div class="team2">
+                    <label for="team2">Equipo 2:</label>
+                    <input type="number" id="team2" value="0" readonly>
+                    <button class="btn-box" onclick="increment('team2')">+</button>
+                    <button class="btn-box" onclick="decrement('team2')">-</button>
+                </div>
+                <button onclick="reset()" class="btn-reset">NUEVO PARTIDO</button>
+            </div>
+        </section>
+
+        <section id="tateti" class="game-section hidden">
+            <h1 class="title-game">Ta-Te-Ti Argento</h1>
+            <div class="status" id="status">Turno de: 🧉</div>
+            
+            <div class="board">
+                <div class="cell" data-index="0"></div>
+                <div class="cell" data-index="1"></div>
+                <div class="cell" data-index="2"></div>
+                <div class="cell" data-index="3"></div>
+                <div class="cell" data-index="4"></div>
+                <div class="cell" data-index="5"></div>
+                <div class="cell" data-index="6"></div>
+                <div class="cell" data-index="7"></div>
+                <div class="cell" data-index="8"></div>
+            </div>
+
+            <button onclick="resetTateti()" class="btn-reset">REINICIAR JUEGO</button>
+        </section>
     </div>
     <script src="index.js"></script>
 </body>
